@@ -1,0 +1,45 @@
+# Core data science libraries
+pandas>=1.5.0
+numpy>=1.21.0
+matplotlib>=3.5.0
+seaborn>=0.11.0
+scipy>=1.7.0
+
+# Machine learning
+scikit-learn>=1.0.0
+torch>=1.12.0
+torchvision>=0.13.0
+torchaudio>=0.12.0
+
+# Time series forecasting libraries
+darts>=0.27.0               # For LSTM, TCN, and TFT models (replaces pytorch-forecasting and pytorch-tcn)
+# pytorch-forecasting>=1.0.0  # COMMENTED OUT - replaced by DARTS
+# pytorch-tcn>=0.4.0          # COMMENTED OUT - replaced by DARTS
+# torchmetrics>=0.11.0        # COMMENTED OUT - replaced by DARTS
+
+# Technical analysis
+TA-Lib>=0.4.25
+
+# Hyperparameter optimization
+optuna>=2.10.0
+
+# Predictive Power Score
+ppscore>=1.3.0
+
+# Statistical modeling
+statsmodels>=0.13.0
+
+# Progress bars
+tqdm>=4.62.0
+
+# Data storage
+tables>=3.7.0
+
+# Jupyter for demos
+jupyter>=1.0.0
+ipykernel>=6.0.0
+notebook>=6.4.0
+
+# Development tools
+ruff>=0.1.0
+black>=22.0.0

@@ -1,0 +1,33 @@
+# Daten und Modelle (zu groß für Repo)
+data/raw/
+data/processed/
+models/*.joblib
+*.h5
+*.pkl
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Temporäre Dateien
+*.tmp
+*.log
+output_files/
+*.csv
