@@ -34,7 +34,7 @@ data_load.py → preprocess.py → feature_engineering.py → train_models.py
 ```
 
 **Pipeline Components:**
-- **Data Layer:** NYSE data (2000-2026), liquidity filtering, quality checks
+- **Data Layer:** NYSE data (2000-2026), liquidity filtering, quality checks, (NO Survivorship Biasfree Data, so you can use the actuel free test date from stooq)
 - **Features:** Technical indicators, volatility metrics, regime detection, fractional differencing
 - **Models:** Random Forest, LSTM, TCN, TFT with hyperparameter optimization
 - **Validation:** Walk-forward with purge periods (15 days), no look-ahead bias
@@ -48,8 +48,8 @@ Phase 2 represents the true test: models trained on fixed hyperparameters, teste
 ### Technical Validation Through Comprehensive Testing
 
 **ML Engineering Achievements:**
-- **Complete end-to-end pipeline**: Raw data → clean features → trained models → OOS validation
-- **Data quality assurance**: Detected and corrected major performance corruption issues
+- **Complete end-to-end pipeline**: Raw data → clean data -> features → trained models → OOS validation
+- **Data quality assurance**: Detected and corrected major data corruption issues
 - **Production discipline**: Systematic testing across 12-fold walk-forward validation
 - **Computational scalability**: 50.6 hours training across 240 model-target combinations
 
@@ -89,7 +89,9 @@ Phase 2 represents the true test: models trained on fixed hyperparameters, teste
 | dl_label_10 | **+1.919 ± 1.378** | **+1.919** | 0.910 | **Most consistent long-term model**  |
 | fwd_log_ret_10 | +0.924 ± 1.546 | +0.924 | 0.072 | Solid return prediction |
 
-**ML Engineering Analysis:** RandomForest demonstrates **robust, production-ready performance** across all targets. Low computational overhead (2.5 hours total) and high stability make it ideal for systematic trading. The model shows no signs of overfitting and maintains consistent performance across validation folds.
+**ML Engineering Analysis:** RandomForest demonstrates **robust, production-ready performance** across all targets. 
+Low computational overhead (2.5 hours total) and high stability make it ideal for systematic trading. 
+The model shows no signs of overfitting and maintains consistent performance across validation folds.
 
 ---
 
